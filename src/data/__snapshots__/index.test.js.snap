@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`data ability-scores-and-modifiers 1`] = `
+Array [
+  Object {
+    "modifier": "−5",
+    "score": Array [
+      1,
+    ],
+  },
+  Object {
+    "modifier": "−4",
+    "score": Array [
+      2,
+      3,
+    ],
+  },
+  Object {
+    "modifier": "−3",
+    "score": Array [
+      4,
+      5,
+    ],
+  },
+  Object {
+    "modifier": "−2",
+    "score": Array [
+      6,
+      7,
+    ],
+  },
+  Object {
+    "modifier": "−1",
+    "score": Array [
+      8,
+      9,
+    ],
+  },
+  Object {
+    "modifier": 0,
+    "score": Array [
+      10,
+      11,
+    ],
+  },
+  Object {
+    "modifier": 1,
+    "score": Array [
+      12,
+      13,
+    ],
+  },
+  Object {
+    "modifier": 2,
+    "score": Array [
+      14,
+      15,
+    ],
+  },
+  Object {
+    "modifier": 3,
+    "score": Array [
+      16,
+      17,
+    ],
+  },
+  Object {
+    "modifier": 4,
+    "score": Array [
+      18,
+      19,
+    ],
+  },
+  Object {
+    "modifier": 5,
+    "score": Array [
+      20,
+      21,
+    ],
+  },
+  Object {
+    "modifier": 6,
+    "score": Array [
+      22,
+      23,
+    ],
+  },
+  Object {
+    "modifier": 7,
+    "score": Array [
+      24,
+      25,
+    ],
+  },
+  Object {
+    "modifier": 8,
+    "score": Array [
+      26,
+      27,
+    ],
+  },
+  Object {
+    "modifier": 9,
+    "score": Array [
+      28,
+      29,
+    ],
+  },
+  Object {
+    "modifier": 10,
+    "score": Array [
+      30,
+    ],
+  },
+]
+`;

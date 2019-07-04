@@ -1,0 +1,23 @@
+{
+  "name": "dnd-coding-challenge",
+  "version": "1.0.0",
+  "description": "Dragons & Developers Universe: Coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest src"
+  },
+  "author": "Juan Gabriel Balbuena Borba <gabrielbalbuena@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "validate": "^4.5.1",
+    "yaml": "^1.6.0"
+  }
+}
