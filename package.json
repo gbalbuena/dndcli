@@ -1,8 +1,12 @@
 {
-  "name": "dnd-coding-challenge",
+  "name": "@gbalbuena/dnd-coding-challenge",
   "version": "1.0.0",
-  "description": "Dragons & Developers Universe: Coding challenge",
-  "main": "index.js",
+  "description": "Dragons & Developers: Coding challenge",
+  "bin": {
+    "@gbalbuena/dnd": "bin/dnd",
+    "dnd": "bin/dnd"
+  },
+  "main": "src/cli.js",
   "scripts": {
     "test": "jest src"
   },
@@ -16,6 +20,9 @@
     "jest": "^24.8.0"
   },
   "dependencies": {
+    "arg": "^4.1.0",
+    "esm": "^3.2.25",
+    "inquirer": "^6.4.1",
     "js-yaml": "^3.13.1",
     "validate": "^4.5.1"
   }
