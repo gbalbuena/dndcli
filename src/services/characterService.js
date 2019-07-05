@@ -11,7 +11,7 @@ function sayHi() {
 }
 
 export async function getModifier(abilityScore) {
-  const collection = await data.getCollection('ability-scores-and-modifiers.yaml');
+  const collection = await data.abilityScoresAndModifiers.getAll();
   return collection.find((v) => v.score.includes(abilityScore)).modifier;
 }
 

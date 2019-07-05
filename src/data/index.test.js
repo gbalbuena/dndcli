@@ -1,7 +1,18 @@
-import data from './'
+import data from './';
+import abilityScoresAndModifiers from './abilityScoresAndModifiers';
+import creatures from './creatures';
+import equipment from './equipment';
 
 describe('data', () => {
-  test('ability-scores-and-modifiers', async () => {
-    expect(await data.getCollection('ability-scores-and-modifiers.yaml')).toMatchSnapshot();
-  })
-})
+  test('abilityScoresAndModifiers', async () => {
+    expect(data.abilityScoresAndModifiers).toBe(abilityScoresAndModifiers);
+  });
+
+  test('creatures', async () => {
+    expect(data.creatures).toBe(creatures);
+  });
+
+  test('equipment', async () => {
+    expect(data.equipment).toBe(equipment);
+  });
+});

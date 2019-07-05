@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "js-yaml": "^3.13.1",
-    "validate": "^4.5.1",
-    "yaml": "^1.6.0"
+    "validate": "^4.5.1"
   }
 }

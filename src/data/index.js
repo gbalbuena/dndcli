@@ -1,10 +1,11 @@
-import fs from 'fs'
-import yaml from 'js-yaml'
-
-async function getCollection(filename) {
-  return yaml.safeLoad(fs.readFileSync(`${__dirname}/${filename}`, 'utf8'));
-}
+import abilityScoresAndModifiers from './abilityScoresAndModifiers'
+import creatures from './creatures';
+import equipment from './equipment';
+import races from './races';
 
 export default {
-  getCollection
+  abilityScoresAndModifiers,
+  creatures,
+  equipment,
+  races
 }

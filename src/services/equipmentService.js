@@ -1,11 +1,10 @@
-import fs from 'fs'
-import yaml from 'js-yaml'
+import data from '../data'
 
-async function getAllEquipment() {
-  const file = await yaml.safeLoad(fs.readFileSync(`${__dirname}/equipment.yaml`, 'utf8'));
-  return file;
+export async function getRandom() {
+  const collection = await data.equipment.getAll();
+  return (collection)[Math.floor(Math.random() * collection.length)];
 }
 
 export default {
-  getAllEquipment
+  getRandom
 }

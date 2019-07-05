@@ -1,19 +1,15 @@
 import Schema from 'validate'
+import raceService from '../services/raceService';
 
 const character = new Schema({
-  id: {
-    type: String,
-    required: true,
-    length: { min: 3, max: 32 }
-  },
   name: {
     type: String,
     required: true,
     length: { min: 3, max: 255 }
   },
-  classType: {
+  race: {
     type: String,
-    enum: ['human', 'elf', 'tiefling', 'dragonborn'],
+    enum: ['Human'],
     required: true
   },
 });
