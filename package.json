@@ -1,5 +1,5 @@
 {
-  "name": "@gbalbuena/dnd-coding-challenge",
+  "name": "@gbalbuena/dnd",
   "version": "1.0.0",
   "description": "Dragons & Developers: Coding challenge",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "main": "src/cli.js",
   "scripts": {
-    "test": "jest src"
+    "test": "jest src --verbose"
   },
   "author": "Juan Gabriel Balbuena Borba <gabrielbalbuena@gmail.com>",
   "license": "ISC",
@@ -17,7 +17,8 @@
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "babel-jest": "^24.8.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "jest-extended": "^0.11.1"
   },
   "dependencies": {
     "arg": "^4.1.0",
@@ -25,5 +26,8 @@
     "inquirer": "^6.4.1",
     "js-yaml": "^3.13.1",
     "validate": "^4.5.1"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["jest-extended"]
   }
 }
