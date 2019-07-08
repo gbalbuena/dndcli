@@ -20,20 +20,10 @@ Not implemented yet
 dnd initiative --player='Good Paladin' --player=evil-wizard.yaml --creature='Imp' --creature=final-monster.json
 ```
 
-### Character
+## Roadmap
 
-```bash
-dnd character create
-```
+Initiative
 
-### Creature
+Workspace
 
-```bash
-dnd creature create
-```
-
-### Equipment
-
-```bash
-dnd equipment create
-```
+Character creation

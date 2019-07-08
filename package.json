@@ -8,7 +8,7 @@
   },
   "main": "src/cli.js",
   "scripts": {
-    "test": "jest src --verbose"
+    "test": "jest src --verbose --coverage"
   },
   "author": "Juan Gabriel Balbuena Borba <gabrielbalbuena@gmail.com>",
   "license": "ISC",

@@ -1,4 +1,7 @@
+import arg from 'arg';
 import inquirer from 'inquirer';
+
+import versionService from './lib/versionService';
 
 async function prompt() {
   const questions = [];
@@ -25,9 +28,26 @@ async function prompt() {
 
   const character = await inquirer.prompt(questions);
   return character;
- }
+}
 
 export async function cli(args) {
-  let options = await prompt();
+  const options = arg({
+    // Types
+    '--version': Boolean,
+    '--help':    Boolean,
+
+    // Aliases
+    '-v':        '--version',
+    '-h':        '--help'
+  }, args);
+
   console.log(options);
+
+  if (options["--version"]) {
+    console.log(versionService.getVersion());
+  }
+
+
+  // let options = await prompt();
+  // console.log(options);
  }
