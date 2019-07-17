@@ -1,4 +1,3 @@
-
 const random = (max) => Math.floor(Math.random() * Math.floor(max) + 1);
 
 export default {

@@ -16,7 +16,7 @@ export async function prompt() {
     message: 'Please choose a class?',
     name: 'class',
     choices: d.classes.getAll().map((e, i) => {
-      return { name: `${e.name} - ${e.description}`, value: e.name, short: e.name };
+      return { name: `${e.name}`, value: e.name, short: e.name };
     })
   });
 
@@ -33,8 +33,8 @@ export async function prompt() {
     type: 'checkbox',
     name: 'equipment',
     message: '⚔Please choose your initial equipment?',
-    choices: d.equipment.getAll().map((e, i) => {
-      return { name: `${e.name}\n   ${e.description}`, value: e.name, short: e.name };
+    choices: d.weapons.getAll().map((e, i) => {
+      return { name: `${e.name} - ${e.damage}`, value: e.name, short: e.name };
     })
   });
 

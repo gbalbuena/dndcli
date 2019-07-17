@@ -5,7 +5,8 @@ async function getAll() {
 }
 
 async function findByName(name) {
-  return (await yamlService.getData('creatures.yaml')).find((creature) => creature.name === name);
+  return (await yamlService.getData('creatures.yaml'))
+    .find((creature) => creature.name.toLowerCase() === name.toLowerCase());
 }
 
 async function save(creature) {

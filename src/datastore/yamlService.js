@@ -6,7 +6,7 @@ export function getData(filename) {
 }
 
 export function saveNewFile(filename, data) {
-  const yamlData = yaml.safeDump([data]);
+  const yamlData = yaml.safeDump(data);
   fs.appendFileSync(`${process.cwd()}/collections/${filename}`, yamlData);
 }
 

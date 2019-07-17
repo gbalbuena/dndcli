@@ -1,7 +1,7 @@
 import d from '../datastore'
 
 export function getModifier(abilityScore) {
-  const collection = d.modifiers.getAll();
+  const collection = d.core.modifiers;
   return parseInt(collection.find((v) => v.score.includes(abilityScore)).modifier);
 }
 

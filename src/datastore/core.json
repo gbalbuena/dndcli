@@ -36,10 +36,30 @@
     { "name": "Use an Object" }
   ],
   "datastore": {
-    "format": "json",
+    "format": "yaml",
     "format_examples": "blockchain, db, yaml, json",
     "source": "collections"
   },
   "roll": "automatic",
-  "roll_example": "automatic, manual"
+  "roll_example": "automatic, manual",
+  "skills": {
+    "athletics": { "modifier": "strength" },
+    "acrobatics": { "modifier": "dexterity" },
+    "sleight_of_Hand": { "modifier": "dexterity" },
+    "stealth": { "modifier": "dexterity" },
+    "arcana": { "modifier": "intelligence" },
+    "history": { "modifier": "intelligence" },
+    "investigation": { "modifier": "intelligence" },
+    "nature": { "modifier": "intelligence" },
+    "religion": { "modifier": "intelligence" },
+    "animal Handling": { "modifier": "wisdom" },
+    "insight": { "modifier": "wisdom" },
+    "medicine": { "modifier": "wisdom" },
+    "perception": { "modifier": "wisdom" },
+    "survival": { "modifier": "wisdom" },
+    "deception": { "modifier": "charisma" },
+    "intimidation": { "modifier": "charisma" },
+    "performance": { "modifier": "charisma" },
+    "persuasion": { "modifier": "charisma" }
+  }
 }
