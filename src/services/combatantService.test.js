@@ -1,10 +1,6 @@
-import service, { getModifier } from './characterService';
+import service, { getModifier } from './combatantService';
 
-describe('character service', () => {
-  test('should say hi', () => {
-    expect(service.sayHi()).toEqual('Hi Evil Wizard');
-  });
-
+describe('combatant service', () => {
   test('ability scores and modifiers', async () => {
     expect(await getModifier(20)).toEqual(5);
   });

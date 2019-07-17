@@ -8,7 +8,12 @@ async function findByName(name) {
   return (await yamlService.getData('creatures.yaml')).find((creature) => creature.name === name);
 }
 
+async function save(creature) {
+  return yamlService.saveNewFile('creatures.yaml', creature);
+}
+
 export default {
   getAll,
-  findByName
+  findByName,
+  save
 }

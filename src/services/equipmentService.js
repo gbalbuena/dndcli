@@ -1,7 +1,7 @@
-import data from '../data'
+import d from '../datastore'
 
 export async function getRandom() {
-  const collection = await data.equipment.getAll();
+  const collection = await d.equipment.getAll();
   return (collection)[Math.floor(Math.random() * collection.length)];
 }
 

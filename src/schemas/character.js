@@ -1,5 +1,5 @@
 import Schema from 'validate'
-import raceService from '../services/raceService';
+import d from '../datastore';
 
 const character = new Schema({
   name: {
@@ -9,7 +9,7 @@ const character = new Schema({
   },
   race: {
     type: String,
-    enum: ['Human'],
+    enum: d.races.getAll().map((r) => r.name ),
     required: true
   },
 });

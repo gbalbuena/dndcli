@@ -1,6 +1,6 @@
 import yamlService from './yamlService';
 
-async function getAll() {
+export function getAll() {
   return yamlService.getData('equipment.yaml');
 }
 
