@@ -1,5 +1,5 @@
 {
-  "name": "@gbalbuena/dndcli",
+  "name": "@gbalbuena/dnd-cli",
   "version": "1.0.0",
   "description": "Dragons & Developers",
   "bin": {
@@ -17,6 +17,7 @@
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "babel-jest": "^24.8.0",
+    "dotenv": "^8.0.0",
     "jest": "^24.8.0",
     "jest-extended": "^0.11.2"
   },

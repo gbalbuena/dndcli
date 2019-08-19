@@ -1,42 +1,38 @@
 import inquirer from 'inquirer';
 import d from './datastore'
+import combatant from './services/combatantService';
 
 export async function prompt() {
-  const questions = [];
-
-  questions.push({
+  const d20 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+  const questions1 = [];
+  questions1.push({
+    prefix: '💪',
     type: 'list',
-    message: 'Make a Wisdom (Perception) check?',
-    name: 'class',
-    choices: d.classes.getAll().map((e, i) => {
-      return { name: `${e.name}`, value: e.name, short: e.name };
-    })
+    message: 'Ability?',
+    name: 'ability',
+    choices: Object.keys(d.core().skills).map((s) => s)
+  });
+  const data1 = await inquirer.prompt(questions1);
+
+  const ability_score = d.core().skills[data1['ability']].modifier;
+  const questions2 = [];
+  questions2.push({
+    prefix: '✨',
+    type: 'input',
+    message: `${ability_score}?`,
+    name: 'ability_score',
   });
 
-  questions.push({
+  questions2.push({
+    prefix: '🎲',
     type: 'list',
-    name: 'race',
-    message: 'Please choose which race would you like to be?',
-    choices: d.races.getAll().map((e, i) => {
-      return { name: `${e.name} - ${e.description}`, value: e.name, short: e.name };
-    })
+    message: `d20 Roll?`,
+    name: 'roll',
+    choices: d20
   });
-
-  questions.push({
-    type: 'checkbox',
-    name: 'equipment',
-    message: '⚔Please choose your initial equipment?',
-    choices: d.weapons.getAll().map((e, i) => {
-      return { name: `${e.name} - ${e.damage}`, value: e.name, short: e.name };
-    })
-  });
-
-  questions.push({
-    type: 'confirm',
-    name: 'confirm',
-    default: 'Y',
-  });
-
-  const character = await inquirer.prompt(questions);
-  return character;
+  const data2 = await inquirer.prompt(questions2);
+  console.log(data2)
+  const modifier = combatant.getModifier(parseInt(data2.ability_score));
+  console.log()
+  return;
 }

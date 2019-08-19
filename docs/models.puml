@@ -1,0 +1,40 @@
+@startuml models
+
+object plane {
+  uuid
+  name
+}
+
+object player {
+  uuid
+  name
+}
+
+object character <<combatant>> {
+  name
+  race
+  class
+}
+
+object creature <<combatant>> {
+}
+
+object combat <<encounter>> {
+  timestamp
+  character = [ ]
+  creature = [ ]
+}
+object round {
+  combatant
+  action
+}
+object turn
+
+
+player o-- " n " character
+plane " n " -- " n " creature
+
+combat o-- " n " round
+combat o-- " n " turn
+
+@enduml

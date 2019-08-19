@@ -1,8 +1,7 @@
-import data from './';
-import creatures from './creatures';
+import d from './';
 
 describe('data', () => {
   test('creatures', async () => {
-    expect(data.creatures).toBe(creatures);
+    expect(d.creatures.all().length).toEqual(1);
   });
 });

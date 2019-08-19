@@ -1,37 +1,62 @@
 import program from 'commander';
 import p from '../package.json';
+import version from './lib/versionService'
 
-import combatant from './services/combatantService';
+import * as abilityCheck from './abilityCheckPrompt';
+
+
 import dice from './services/diceRollService';
 import d from './datastore';
+import { format, source } from './config';
 
 export async function cli(args) {
+  console.log(version.getVersion());
   program
     .version(p.version)
-    .option('-d, --debug', 'output extra debugging');
+    .option('-d, --debug', 'output extra debugging')
 
   // GAME MECHANICS commands
 
   program
-    .command('abilitycheck [ability]')
+    .command('config')
+    .alias('conf')
+    .description('get configuration')
+    .action((opts) => {
+      console.log({  format: format(), source: source() });
+    });
+
+  program
+    // .command('abilitycheck [ability]')
+    .command('abilitycheck [action]')
     .alias('ac')
     .description('get ability check')
-    .option('-a, --abilityscore <number>', 'ability score', 10)
-    .option('-r, --roll <number>', 'dice roll value', dice.d20())
-    .action((ability, options) => {
-      const skills = d.core().skills;
-      const abilities = Object.keys(skills);
-      const roll = parseInt(options.roll);
-      const abilityscore = parseInt(options.abilityscore);
-      if (abilities.includes(ability)) {
-        console.log(`Making a ${skills[ability].modifier} (${ability}=${abilityscore}) check:`)
-        const modifier = combatant.getModifier(abilityscore);
-        console.log();
-        console.log(` > roll(${roll}) + modifier(${modifier}) = ${abilityscore + modifier}`)
-        console.log();
-      } else {
-        console.error(`${ability} not found in ability list`);
+    .option('-r, --raw', 'output json in raw json')
+    .action((action, opts) => {
+      if (action === 'ls') {
+        const skills = d.core().skills;
+        if (opts.raw) {
+          console.log(JSON.stringify(skills));
+        } else {
+          console.log(skills);
+        }
       }
+      abilityCheck.prompt();
+      // console.log(ls);
+      // console.log(ability);
+      // const skills = d.core().skills;
+      // const abilities = Object.keys(skills);
+      // const roll = parseInt(opts.roll);
+      // const abilityscore = parseInt(opts.abilityscore);
+      // if (abilities.includes(ability)) {
+      //   console.log(`Making a ${skills[ability].modifier} (${ability}=${abilityscore}) check:`)
+      //   const modifier = combatant.getModifier(abilityscore);
+      //   console.log();
+      //   console.log(` > roll(${roll}) + modifier(${modifier}) = ${abilityscore + modifier}`)
+      //   console.log();
+      // } else {
+      //   console.error(`${ability} not found in ability list`);
+      //   console.log(abilities)
+      // }
     });
 
   // DATA Commands
@@ -69,6 +94,6 @@ export async function cli(args) {
       console.log(JSON.stringify(d.weapons.all()));
     });
 
-  program.parse(process.argv);
+  program.parse(args);
   if (program.debug) console.log(program.opts());
 }

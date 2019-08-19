@@ -9,7 +9,7 @@ const character = new Schema({
   },
   race: {
     type: String,
-    enum: d.races.getAll().map((r) => r.name ),
+    enum: d.races.all().map((r) => r.name ),
     required: true
   },
 });
