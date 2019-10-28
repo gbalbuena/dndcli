@@ -137,13 +137,16 @@
     "cost": "1500 gp",
     "weight": "65 lb.",
     "requirements": { "strength": 15 },
-    "modifier": {},
+    "modifier": [ "dexterity" ],
     "disadvantage": true
   }, {
     "id": "mage_armour_spell",
     "name": "Mage Armour spell",
+    "type": "Spell",
     "rarity": "",
     "ac": 13,
+    "cost": "0 gp",
+    "weight": "0 lb.",
     "modifier": [ "dexterity" ],
     "requirements": {},
     "disadvantage": false
@@ -153,6 +156,8 @@
     "type": "Defense ability",
     "rarity": "",
     "ac": 10,
+    "cost": "0 gp",
+    "weight": "0 lb.",
     "modifier": [ "dexterity", "constitution" ],
     "requirements": {},
     "disadvantage": false
@@ -162,6 +167,8 @@
     "type": "Defense ability",
     "rarity": "",
     "ac": 10,
+    "cost": "0 gp",
+    "weight": "0 lb.",
     "modifier": [ "dexterity", "wisdom" ],
     "requirements": {},
     "disadvantage": false
@@ -171,6 +178,8 @@
     "type": "Resilience ability",
     "rarity": "",
     "ac": 13,
+    "cost": "0 gp",
+    "weight": "0 lb.",
     "modifier": [ "dexterity" ],
     "requirements": {},
     "disadvantage": false
