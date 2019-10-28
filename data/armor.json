@@ -50,7 +50,7 @@
     "weight": "12 lb.",
     "modifier": [ "dexterity" ],
     "requirements": {},
-    "disadvantage": true
+    "disadvantage": false
   }, {
     "id": "chain_shirt",
     "name": "Chain Shirt",
@@ -61,7 +61,7 @@
     "weight": "20 lb.",
     "modifier": [ "dexterity" ],
     "requirements": {},
-    "disadvantage": true
+    "disadvantage": false
   }, {
     "id": "scale",
     "name": "Scale mail",
@@ -98,7 +98,7 @@
   }, {
     "id": "ring_mail",
     "name": "Ring mail",
-    "type": "Medium Armor",
+    "type": "Heavy Armor",
     "rarity": "Standard",
     "ac": 14,
     "cost": "30 gp",
@@ -109,7 +109,7 @@
   }, {
     "id": "chain_mail",
     "name": "Chain mail",
-    "type": "Medium Armor",
+    "type": "Heavy Armor",
     "rarity": "Standard",
     "ac": 16,
     "cost": "75 gp",
@@ -120,7 +120,7 @@
   }, {
     "id": "splint",
     "name": "Splint",
-    "type": "Medium Armor",
+    "type": "Heavy Armor",
     "rarity": "Standard",
     "ac": 17,
     "cost": "200 gp",
