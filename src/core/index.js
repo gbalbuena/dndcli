@@ -1,3 +1,5 @@
+import datastore from '../datastore/index';
+
 const base_ac = {
   no_armor: 10,
   leather_armour: 11,
@@ -10,29 +12,29 @@ const base_ac = {
 }
 
 function ac({
-  armor = 'no_armor',
+  armorId = 'no_armor',
   dexterity_modifier = 0,
   constitution_modifier = 0,
   wisdom_modifier = 0,
   shield = false,
   half_cover = false
 } ) {
+  const armorItem = datastore.armor.find((armor) => armor.id === armorId);
 
-  // max dex 2
-  // TODO: Implement data structure armor.json
-  // if (type === 'Medium Armor' && dexterity_modifier > 2) {
-  //  dexterity_modifier = 2;
-  // }
+  if (armorItem.type === 'Medium Armor' && dexterity_modifier > 2) {
+    dexterity_modifier = 2;
+  }
 
+  if (armorItem.type === 'Heavy Armor') {
+    dexterity_modifier = 0; // ignore dex
+  }
 
-  // if (type === 'Heavy Armor') {
-  //  dexterity_modifier = 0; // ignore dex
-  // }
+  let ac_total = armorItem.ac + dexterity_modifier;
 
-  let ac_total = base_ac[armor] +
-    ((armor === 'plate_mail') ? 0 : dexterity_modifier) +
-    ((armor === 'barbarian_unarmoured_defense_ability') ? dexterity_modifier + constitution_modifier: 0) +
-    ((armor === 'monk_unarmoured_defense_ability') ? dexterity_modifier + wisdom_modifier : 0);
+        // let ac_total = base_ac[armor] +
+        //   ((armor === 'plate_mail') ? 0 : dexterity_modifier) +
+        //   ((armor === 'barbarian_unarmoured_defense_ability') ? dexterity_modifier + constitution_modifier: 0) +
+        //   ((armor === 'monk_unarmoured_defense_ability') ? dexterity_modifier + wisdom_modifier : 0);
 
   if (half_cover) {
     ac_total = ac_total + 2;

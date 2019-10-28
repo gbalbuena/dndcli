@@ -3,7 +3,7 @@
     "name": "No Armor",
     "type": "No Armor",
     "rarity": "Standard",
-    "ac": 0,
+    "ac": 10,
     "cost": "5 gp",
     "modifier": [ "dexterity" ],
     "requirements": {},
@@ -85,7 +85,7 @@
     "requirements": {},
     "disadvantage": false
   }, {
-    "id": "Half plate",
+    "id": "half_plate",
     "name": "Half plate",
     "type": "Medium Armor",
     "rarity": "Standard",
@@ -96,7 +96,7 @@
     "requirements": {},
     "disadvantage": true
   }, {
-    "id": "Ring mail",
+    "id": "ring_mail",
     "name": "Ring mail",
     "type": "Medium Armor",
     "rarity": "Standard",
@@ -107,7 +107,7 @@
     "requirements": {},
     "disadvantage": true
   }, {
-    "id": "Chain mail",
+    "id": "chain_mail",
     "name": "Chain mail",
     "type": "Medium Armor",
     "rarity": "Standard",
@@ -118,7 +118,7 @@
     "requirements": { "strength": 13 },
     "disadvantage": true
   }, {
-    "id": "Splint",
+    "id": "splint",
     "name": "Splint",
     "type": "Medium Armor",
     "rarity": "Standard",
