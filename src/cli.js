@@ -1,9 +1,7 @@
 import commander from 'commander';
 import Table from 'terminal-table';
 
-
 import datastore from './datastore';
-// import { format, source } from './config';
 
 export async function cli(args) {
   const program = new commander.Command();
@@ -28,7 +26,7 @@ export async function cli(args) {
         t.push([item.name, item.type, item.ac, item.cost, item.weight, item.disadvantage]);
       });
       t.attrRange({ row: [0, 1] }, { align: "center" });
-      console.log('' + t)
+      console.log('' + t);
     });
 
   program.parse(args);
