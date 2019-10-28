@@ -1,7 +1,7 @@
-import d from './';
+import datastore from './';
 
-describe('data', () => {
-  test('creatures', async () => {
-    expect(d.creatures.all().length).toEqual(1);
+describe('datastore', () => {
+  test('armor', async () => {
+    expect(datastore.armor.length).toEqual(17);
   });
 });

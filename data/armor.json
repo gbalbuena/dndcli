@@ -1,0 +1,178 @@
+[
+  { "id": "no_armor",
+    "name": "No Armor",
+    "type": "No Armor",
+    "rarity": "Standard",
+    "ac": 0,
+    "cost": "5 gp",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": false
+  }, {
+    "id": "padded_armour",
+    "name": "Padded Armor",
+    "type": "Light Armor",
+    "rarity": "Standard",
+    "ac": 11,
+    "cost": "5 gp",
+    "weight": "8 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": true
+  }, {
+    "id": "leather_armour",
+    "name": "Leather Armor",
+    "type": "Light Armor",
+    "rarity": "Standard",
+    "ac": 11,
+    "cost": "10 gp",
+    "weight": "10 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": false
+  }, {
+    "id": "studded_leather_armour",
+    "name": "Studded Leather Armor",
+    "type": "Light Armor",
+    "rarity": "Standard",
+    "ac": 12,
+    "cost": "45 gp",
+    "weight": "13 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": false
+  }, {
+    "id": "hide",
+    "name": "Hide",
+    "type": "Medium Armor",
+    "ac": 12,
+    "cost": "10 gp",
+    "weight": "12 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": true
+  }, {
+    "id": "chain_shirt",
+    "name": "Chain Shirt",
+    "type": "Medium Armor",
+    "rarity": "Standard",
+    "ac": 13,
+    "cost": "50 gp",
+    "weight": "20 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": true
+  }, {
+    "id": "scale",
+    "name": "Scale mail",
+    "type": "Medium Armor",
+    "rarity": "Standard",
+    "ac": 14,
+    "cost": "50 gp",
+    "weight": "45 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": true
+  }, {
+    "id": "breastplate",
+    "name": "Breastplate",
+    "type": "Medium Armor",
+    "rarity": "Standard",
+    "ac": 14,
+    "cost": "400 gp",
+    "weight": "20 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": false
+  }, {
+    "id": "Half plate",
+    "name": "Half plate",
+    "type": "Medium Armor",
+    "rarity": "Standard",
+    "ac": 15,
+    "cost": "750 gp",
+    "weight": "40 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": true
+  }, {
+    "id": "Ring mail",
+    "name": "Ring mail",
+    "type": "Medium Armor",
+    "rarity": "Standard",
+    "ac": 14,
+    "cost": "30 gp",
+    "weight": "40 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": true
+  }, {
+    "id": "Chain mail",
+    "name": "Chain mail",
+    "type": "Medium Armor",
+    "rarity": "Standard",
+    "ac": 16,
+    "cost": "75 gp",
+    "weight": "55 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": { "strength": 13 },
+    "disadvantage": true
+  }, {
+    "id": "Splint",
+    "name": "Splint",
+    "type": "Medium Armor",
+    "rarity": "Standard",
+    "ac": 17,
+    "cost": "200 gp",
+    "weight": "60 lb.",
+    "modifier": [ "dexterity" ],
+    "requirements": { "strength": 15 },
+    "disadvantage": true
+  }, {
+    "id": "plate_mail",
+    "name": "Plate Mail",
+    "type": "Heavy Armor",
+    "rarity": "Standard",
+    "ac": 18,
+    "cost": "1500 gp",
+    "weight": "65 lb.",
+    "requirements": { "strength": 15 },
+    "modifier": {},
+    "disadvantage": true
+  }, {
+    "id": "mage_armour_spell",
+    "name": "Mage Armour spell",
+    "rarity": "",
+    "ac": 13,
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": false
+  }, {
+    "id": "barbarian_unarmoured",
+    "name": "Barbarian Unarmoured",
+    "type": "Defense ability",
+    "rarity": "",
+    "ac": 10,
+    "modifier": [ "dexterity", "constitution" ],
+    "requirements": {},
+    "disadvantage": false
+  }, {
+    "id": "monk_unarmoured",
+    "name": "Monk Unarmoured",
+    "type": "Defense ability",
+    "rarity": "",
+    "ac": 10,
+    "modifier": [ "dexterity", "wisdom" ],
+    "requirements": {},
+    "disadvantage": false
+  }, {
+    "id": "sorcerer_draconic",
+    "name": "Sorcerer Draconic",
+    "type": "Resilience ability",
+    "rarity": "",
+    "ac": 13,
+    "modifier": [ "dexterity" ],
+    "requirements": {},
+    "disadvantage": false
+  }
+]

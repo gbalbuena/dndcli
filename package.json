@@ -1,10 +1,10 @@
 {
-  "name": "@gbalbuena/dnd-cli",
-  "version": "1.0.0",
+  "name": "@gbalbuena/dndcli",
+  "version": "0.0.1",
   "description": "Dragons & Developers",
   "bin": {
-    "@gbalbuena/dnd": "bin/dnd",
-    "dnd": "bin/dnd"
+    "@gbalbuena/dndcli": "bin/dnd",
+    "dndcli": "bin/dnd"
   },
   "main": "src/cli.js",
   "scripts": {
