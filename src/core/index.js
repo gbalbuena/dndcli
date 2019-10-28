@@ -1,14 +1,14 @@
 import datastore from '../datastore/index';
 
 function ac({
-  armorId = 'no_armor',
+  armor_id = 'no_armor',
   dexterity_modifier = 0,
   constitution_modifier = 0,
   wisdom_modifier = 0,
   shield = false,
   half_cover = false
 } ) {
-  const armorItem = datastore.armor.find((armor) => armor.id === armorId);
+  const armorItem = datastore.armor.find((armor) => armor.id === armor_id);
 
   if (armorItem.type === 'Medium Armor' && dexterity_modifier > 2) {
     dexterity_modifier = 2; // max dex = 2
@@ -42,6 +42,6 @@ function ac({
   return ac_total;
 }
 
-module.exports = {
+export default {
   ac
 }
