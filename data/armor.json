@@ -5,7 +5,7 @@
     "rarity": "Standard",
     "ac": 10,
     "cost": "5 gp",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": null } ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -16,7 +16,7 @@
     "ac": 11,
     "cost": "5 gp",
     "weight": "8 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": null } ],
     "requirements": {},
     "disadvantage": true
   }, {
@@ -27,7 +27,7 @@
     "ac": 11,
     "cost": "10 gp",
     "weight": "10 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": null } ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -38,7 +38,7 @@
     "ac": 12,
     "cost": "45 gp",
     "weight": "13 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": null } ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -48,7 +48,7 @@
     "ac": 12,
     "cost": "10 gp",
     "weight": "12 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": 2 } ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -59,7 +59,7 @@
     "ac": 13,
     "cost": "50 gp",
     "weight": "20 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": 2 } ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -70,7 +70,7 @@
     "ac": 14,
     "cost": "50 gp",
     "weight": "45 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": 2 } ],
     "requirements": {},
     "disadvantage": true
   }, {
@@ -81,7 +81,7 @@
     "ac": 14,
     "cost": "400 gp",
     "weight": "20 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": 2 } ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -92,7 +92,7 @@
     "ac": 15,
     "cost": "750 gp",
     "weight": "40 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": 2 } ],
     "requirements": {},
     "disadvantage": true
   }, {
@@ -147,7 +147,7 @@
     "ac": 13,
     "cost": "0 gp",
     "weight": "0 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": null } ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -158,7 +158,10 @@
     "ac": 10,
     "cost": "0 gp",
     "weight": "0 lb.",
-    "modifier": [ "dexterity", "constitution" ],
+    "modifier": [
+      { "ability": "dexterity", "max": null },
+      { "ability": "constitution", "max": null }
+    ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -169,7 +172,10 @@
     "ac": 10,
     "cost": "0 gp",
     "weight": "0 lb.",
-    "modifier": [ "dexterity", "wisdom" ],
+    "modifier": [
+      { "ability": "dexterity", "max": null },
+      { "ability": "wisdom", "max": null }
+    ],
     "requirements": {},
     "disadvantage": false
   }, {
@@ -180,7 +186,7 @@
     "ac": 13,
     "cost": "0 gp",
     "weight": "0 lb.",
-    "modifier": [ "dexterity" ],
+    "modifier": [ { "ability": "dexterity", "max": null } ],
     "requirements": {},
     "disadvantage": false
   }

@@ -1,0 +1,70 @@
+{
+  "atack": [
+    {
+      "args": {
+        "weapon_name": "Javelin",
+        "weapon_damage_die": 6,
+        "weapon_damage_bonus": 0,
+        "proficiency_bonus": 0,
+        "dexterity_modifier": 0,
+        "strenght_modifier": 0
+      },
+      "expectation": 6
+    },
+    {
+      "args": {
+        "weapon_name": "Javelin",
+        "weapon_damage_die": 6,
+        "weapon_damage_bonus": 1,
+        "proficiency_bonus": 0,
+        "dexterity_modifier": 0,
+        "strenght_modifier": 0
+      },
+      "expectation": 7
+    },
+    {
+      "args": {
+        "weapon_name": "Javelin",
+        "weapon_damage_die": 6,
+        "weapon_damage_bonus": 1,
+        "proficiency_bonus": 2,
+        "dexterity_modifier": 0,
+        "strenght_modifier": 0
+      },
+      "expectation": 9
+    },
+    {
+      "args": {
+        "weapon_name": "Javelin",
+        "weapon_damage_die": 6,
+        "weapon_damage_bonus": 1,
+        "proficiency_bonus": 2,
+        "dexterity_modifier": 0,
+        "strenght_modifier": 1
+      },
+      "expectation": 10
+    },
+    {
+      "args": {
+        "weapon_name": "Javelin",
+        "weapon_damage_die": 6,
+        "weapon_damage_bonus": 1,
+        "proficiency_bonus": 2,
+        "dexterity_modifier": 1,
+        "strenght_modifier": 1
+      },
+      "expectation": 10
+    },
+    {
+      "args": {
+        "weapon_name": "Dagger",
+        "weapon_damage_die": 4,
+        "weapon_damage_bonus": 0,
+        "proficiency_bonus": 0,
+        "dexterity_modifier": 1,
+        "strenght_modifier": 1
+      },
+      "expectation": 5
+    }
+  ]
+}

@@ -37,7 +37,6 @@ export async function cli(args) {
 
   program
     .command('armor')
-
     .description('show armor')
     .action(() => {
       if (program.format === 'json') {
@@ -53,6 +52,24 @@ export async function cli(args) {
       t.attrRange({ row: [0, 1] }, { align: "center" });
       console.log('' + t);
     });
+
+    program
+      .command('weapons')
+      .description('weapons')
+      .action(() => {
+        if (program.format === 'json') {
+          console.log(JSON.stringify(datastore.weapons));
+          return;
+        }
+
+        var t = new Table();
+        t.push(['Name']);
+        datastore.weapons.forEach((weapon) => {
+          t.push([weapon.name]);
+        });
+        t.attrRange({ row: [0, 1] }, { align: "center" });
+        console.log('' + t);
+      });
 
   program.parse(args);
   if (program.debug) console.log(program.opts());
