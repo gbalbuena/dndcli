@@ -10,34 +10,22 @@ describe('core', () => {
     });
   });
   describe('ac', () => {
-    describe('none', () => {
-      test('no armor', () => {
-        const armor_id = 'no_armor';
-        expect(core.ac({ armor_id, dexterity_modifier: -1 })).toEqual(9);
-
-        expect(core.ac({ armor_id, dexterity_modifier: 0 })).toEqual(10);
-        expect(core.ac({ armor_id, dexterity_modifier: 1 })).toEqual(11);
-        expect(core.ac({ armor_id, dexterity_modifier: 2 })).toEqual(12);
-        expect(core.ac({ armor_id, dexterity_modifier: 3 })).toEqual(13);
-
-        expect(core.ac({ armor_id, dexterity_modifier: 1, half_cover: true })).toEqual(13);
-        expect(core.ac({ armor_id, dexterity_modifier: 1, shield: true })).toEqual(13);
+    describe('no armor', () => {
+      data.ac_no_armor.forEach((obj) => {
+        test(`${obj.args.armor_id} should return ${obj.expectation}`, () => {
+          expect(core.ac(obj.args)).toEqual(obj.expectation);
+        });
       });
     });
-    describe('light Armor', () => {
-      test('leather armour', () => {
-        const armor_id = 'leather_armour'
-        expect(core.ac({ armor_id, dexterity_modifier: -1 })).toEqual(10);
 
-        expect(core.ac({ armor_id, dexterity_modifier: 0 })).toEqual(11);
-        expect(core.ac({ armor_id, dexterity_modifier: 1 })).toEqual(12);
-        expect(core.ac({ armor_id, dexterity_modifier: 2 })).toEqual(13);
-        expect(core.ac({ armor_id, dexterity_modifier: 3 })).toEqual(14);
-
-        expect(core.ac({ armor_id, dexterity_modifier: 1, half_cover: true })).toEqual(14);
-        expect(core.ac({ armor_id, dexterity_modifier: 1, shield: true })).toEqual(14);
+    describe('light armor', () => {
+      data.ac_light_armor.forEach((obj) => {
+        test(`${obj.args.armor_id} should return ${obj.expectation}`, () => {
+          expect(core.ac(obj.args)).toEqual(obj.expectation);
+        });
       });
     });
+
     describe('medium Armor', () => {
       test('hide', () => {
         expect(core.ac({ armor_id: 'hide', dexterity_modifier: -1 })).toEqual(11);

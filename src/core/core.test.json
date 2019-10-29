@@ -2,69 +2,85 @@
   "atack": [
     {
       "args": {
-        "weapon_name": "Javelin",
-        "weapon_damage_die": 6,
-        "weapon_damage_bonus": 0,
-        "proficiency_bonus": 0,
-        "dexterity_modifier": 0,
-        "strenght_modifier": 0
+        "weapon_name":       "Javelin",
+        "weapon_damage_die": 6
       },
       "expectation": 6
     },
     {
       "args": {
-        "weapon_name": "Javelin",
-        "weapon_damage_die": 6,
-        "weapon_damage_bonus": 1,
-        "proficiency_bonus": 0,
-        "dexterity_modifier": 0,
-        "strenght_modifier": 0
+        "weapon_name":         "Javelin",
+        "weapon_damage_die":   6,
+        "weapon_damage_bonus": 1
       },
       "expectation": 7
     },
     {
       "args": {
-        "weapon_name": "Javelin",
-        "weapon_damage_die": 6,
+        "weapon_name":         "Javelin",
+        "weapon_damage_die":   6,
         "weapon_damage_bonus": 1,
-        "proficiency_bonus": 2,
-        "dexterity_modifier": 0,
-        "strenght_modifier": 0
+        "proficiency_bonus":   2
       },
       "expectation": 9
     },
     {
       "args": {
-        "weapon_name": "Javelin",
-        "weapon_damage_die": 6,
+        "weapon_name":         "Javelin",
+        "weapon_damage_die":   6,
         "weapon_damage_bonus": 1,
-        "proficiency_bonus": 2,
-        "dexterity_modifier": 0,
-        "strenght_modifier": 1
+        "proficiency_bonus":   2,
+        "strenght_modifier":   1
       },
       "expectation": 10
     },
     {
       "args": {
-        "weapon_name": "Javelin",
-        "weapon_damage_die": 6,
+        "weapon_name":         "Javelin",
+        "weapon_damage_die":   6,
         "weapon_damage_bonus": 1,
-        "proficiency_bonus": 2,
-        "dexterity_modifier": 1,
-        "strenght_modifier": 1
+        "proficiency_bonus":   2,
+        "dexterity_modifier":  1,
+        "strenght_modifier":   1
       },
       "expectation": 10
     },
     {
       "args": {
-        "weapon_name": "Dagger",
-        "weapon_damage_die": 4,
-        "weapon_damage_bonus": 0,
-        "proficiency_bonus": 0,
+        "weapon_name":        "Dagger",
+        "weapon_damage_die":  4,
         "dexterity_modifier": 1,
-        "strenght_modifier": 1
+        "strenght_modifier":  1
       },
       "expectation": 5
+    },
+    {
+      "args": {
+        "weapon_name":        "Dagger",
+        "weapon_damage_die":  4,
+        "dexterity_modifier": 2,
+        "strenght_modifier":  1,
+        "finesse":            true
+      },
+      "expectation": 6
     }
+  ],
+  "ac_no_armor": [
+    { "args": { "armor_id": "no_armor", "dexterity_modifier": -1 }, "expectation": 9 },
+    { "args": { "armor_id": "no_armor", "dexterity_modifier":  0 }, "expectation": 10 },
+    { "args": { "armor_id": "no_armor", "dexterity_modifier":  1 }, "expectation": 11 },
+    { "args": { "armor_id": "no_armor", "dexterity_modifier":  2 }, "expectation": 12 },
+    { "args": { "armor_id": "no_armor", "dexterity_modifier":  3 }, "expectation": 13 },
+    { "args": { "armor_id": "no_armor", "dexterity_modifier":  1, "half_cover": true }, "expectation": 13 },
+    { "args": { "armor_id": "no_armor", "dexterity_modifier":  1, "shield": true }, "expectation": 13 }
+  ],
+  "ac_light_armor": [
+    { "args": { "armor_id": "leather_armour", "dexterity_modifier": -1 }, "expectation": 10 },
+    { "args": { "armor_id": "leather_armour", "dexterity_modifier":  0 }, "expectation": 11 },
+    { "args": { "armor_id": "leather_armour", "dexterity_modifier":  1 }, "expectation": 12 },
+    { "args": { "armor_id": "leather_armour", "dexterity_modifier":  2 }, "expectation": 13 },
+    { "args": { "armor_id": "leather_armour", "dexterity_modifier":  3 }, "expectation": 14 },
+    { "args": { "armor_id": "leather_armour", "dexterity_modifier":  1, "half_cover": true }, "expectation": 14 },
+    { "args": { "armor_id": "leather_armour", "dexterity_modifier":  1, "shield": true }, "expectation": 14 }
   ]
 }

@@ -6,11 +6,12 @@ function attack({
   weapon_damage_bonus = 0,
   proficiency_bonus   = 0,
   dexterity_modifier  = 0,
-  strenght_modifier   = 0
+  strenght_modifier   = 0,
+  finesse             = false
 }) {
   const weapon = datastore.weapons.find((weapon) => weapon.name === weapon_name);
 
-  if (weapon.properties.includes("finesse")) {
+  if (weapon.properties.includes("finesse") && finesse) {
     return weapon_damage_die + weapon_damage_bonus + proficiency_bonus + dexterity_modifier;
   }
   return weapon_damage_die + weapon_damage_bonus + proficiency_bonus + strenght_modifier;
