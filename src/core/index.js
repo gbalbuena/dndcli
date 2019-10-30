@@ -1,9 +1,9 @@
 import datastore from '../datastore/index';
 
-function attack({
+function attack_roll({
+  atack_die_1d20      = 1,
   weapon_name         = 'Javelin',
-  weapon_damage_die   = 1,
-  weapon_damage_bonus = 0,
+  weapon_attack_bonus = 0,
   proficiency_bonus   = 0,
   dexterity_modifier  = 0,
   strenght_modifier   = 0,
@@ -12,9 +12,25 @@ function attack({
   const weapon = datastore.weapons.find((weapon) => weapon.name === weapon_name);
 
   if (weapon.properties.includes("finesse") && finesse) {
-    return weapon_damage_die + weapon_damage_bonus + proficiency_bonus + dexterity_modifier;
+    return atack_die_1d20 + weapon_attack_bonus + proficiency_bonus + dexterity_modifier;
   }
-  return weapon_damage_die + weapon_damage_bonus + proficiency_bonus + strenght_modifier;
+  return atack_die_1d20 + weapon_attack_bonus + proficiency_bonus + strenght_modifier;
+}
+
+function damage_roll({
+  weapon_name         = 'Javelin',
+  weapon_damage_die   = 1,
+  weapon_damage_bonus = 0,
+  dexterity_modifier  = 0,
+  strenght_modifier   = 0,
+  finesse             = false
+}) {
+  const weapon = datastore.weapons.find((weapon) => weapon.name === weapon_name);
+
+  if (weapon.properties.includes("finesse") && finesse) {
+    return weapon_damage_die + weapon_damage_bonus + dexterity_modifier;
+  }
+  return weapon_damage_die + weapon_damage_bonus + strenght_modifier;
 }
 
 function ac({
@@ -69,5 +85,5 @@ function ac({
 
 export default {
   ac,
-  attack
+  damage_roll
 }

@@ -2,13 +2,14 @@ import core from './index';
 import data from './core.test.json';
 
 describe('core', () => {
-  describe('attack', () => {
-    data.atack.forEach((obj) => {
+  describe('damage_roll', () => {
+    data.damage_roll.forEach((obj) => {
       test(`${obj.args.weapon_name} should return ${obj.expectation}`, () => {
-        expect(core.attack(obj.args)).toEqual(obj.expectation);
+        expect(core.damage_roll(obj.args)).toEqual(obj.expectation);
       });
     });
   });
+
   describe('ac', () => {
     describe('no armor', () => {
       data.ac_no_armor.forEach((obj) => {

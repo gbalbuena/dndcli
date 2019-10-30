@@ -1,5 +1,5 @@
 {
-  "atack": [
+  "damage_roll": [
     {
       "args": {
         "weapon_name":       "Javelin",
@@ -19,31 +19,28 @@
       "args": {
         "weapon_name":         "Javelin",
         "weapon_damage_die":   6,
-        "weapon_damage_bonus": 1,
-        "proficiency_bonus":   2
+        "weapon_damage_bonus": 1
       },
-      "expectation": 9
+      "expectation": 7
     },
     {
       "args": {
         "weapon_name":         "Javelin",
         "weapon_damage_die":   6,
         "weapon_damage_bonus": 1,
-        "proficiency_bonus":   2,
         "strenght_modifier":   1
       },
-      "expectation": 10
+      "expectation": 8
     },
     {
       "args": {
         "weapon_name":         "Javelin",
         "weapon_damage_die":   6,
         "weapon_damage_bonus": 1,
-        "proficiency_bonus":   2,
         "dexterity_modifier":  1,
         "strenght_modifier":   1
       },
-      "expectation": 10
+      "expectation": 8
     },
     {
       "args": {
