@@ -10,6 +10,9 @@ describe('core', () => {
     });
   });
 
+  test.skip('attack_roll', () => {
+  });
+
   describe('ac', () => {
     describe('no armor', () => {
       data.ac_no_armor.forEach((obj) => {
